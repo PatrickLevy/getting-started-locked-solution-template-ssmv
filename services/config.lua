@@ -10,7 +10,7 @@ matches the following schema:
 		id:"...",
 		application_type: "rcm|hamv"
 		application_version: "1.3.1",
-		status:"online|offline|pending|degraded",
+		status:"online|offline|requested|degraded",
 		capabilities:[
 		   {"title":"User",
        "description":"User profile and auth functionality",
@@ -24,5 +24,6 @@ matches the following schema:
 --]]
 
 local JSONreply = {}
-JSONreply.status = "pending"
+JSONreply.status = "requested"
+JSONreply.disabled = true
 return JSONreply
